@@ -11,6 +11,8 @@
         }
         #logDisplay {
             margin-top: 20px;
+            max-height: 300px;
+            overflow-y: scroll;
         }
         table {
             width: 100%;
@@ -21,16 +23,37 @@
             text-align: left;
             border-bottom: 1px solid #ddd;
         }
+        #statistics {
+            margin-top: 20px;
+        }
+        #searchBar {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        #charts {
+            margin-top: 20px;
+        }
+        canvas {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>Log File Metrics System</h1>
     <input type="file" id="logFile" accept=".txt">
+
+    <input type="text" id="searchBar" placeholder="Search events...">
+
     <div id="logDisplay"></div>
+
+    <div id="statistics"></div>
+
+    <div id="charts"></div>
+
+    <button id="exportCSV">Export to CSV</button>
 
     <!-- Chart.js Library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     <script src="app.js"></script>
 </body>
 </html>
